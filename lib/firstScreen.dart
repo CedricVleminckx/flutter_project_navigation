@@ -8,7 +8,7 @@ class FirstScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('First Screen'),
       ),
-      drawer: new Drawer(
+      drawer: Drawer(
         child: Column(
           children: <Widget>[
             DrawerHeader(
@@ -29,17 +29,12 @@ class FirstScreen extends StatelessWidget {
             FlatButton(
               onPressed: () {
                 Navigator.of(context).pop();
-                new PageRouteBuilder(
-                    pageBuilder: (BuildContext context, _, __) {
-                      return new FirstScreen();
-                    },
-                    transitionsBuilder: (_, Animation<double> animation, __, Widget child) {
-                      return new FadeTransition(
-                        opacity: animation,
-                        child: child
-                      );
-                    }
-                  );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FirstScreen(),
+                  ),
+                );
               },
               child: Text('First Screen'),
             ),
