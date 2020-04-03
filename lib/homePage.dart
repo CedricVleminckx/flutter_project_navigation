@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home Screen'),
       ),
-      drawer: DrawerComponent()
+      drawer: DrawerComponent(currentDrawerItem: 'Home screen',)
     );
   }
 }

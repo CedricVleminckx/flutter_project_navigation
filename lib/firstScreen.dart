@@ -8,7 +8,7 @@ class FirstScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('First Screen'),
       ),
-      drawer: DrawerComponent()
+      drawer: DrawerComponent(currentDrawerItem: 'First screen',)
     );
   }
 }
