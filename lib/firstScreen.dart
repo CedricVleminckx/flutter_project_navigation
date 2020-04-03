@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_1/homePage.dart';
+import 'package:project_1/drawerComponent.dart';
 
 class FirstScreen extends StatelessWidget {
   @override
@@ -8,39 +8,7 @@ class FirstScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('First Screen'),
       ),
-      drawer: Drawer(
-        child: Column(
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Header'),
-            ),
-            FlatButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => HomePage(),
-                  ),
-                );
-              },
-              child: Text('Home Screen'),
-            ),
-            FlatButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => FirstScreen(),
-                  ),
-                );
-              },
-              child: Text('First Screen'),
-            ),
-          ],
-        ),
-      ),
+      drawer: DrawerComponent()
     );
   }
 }
